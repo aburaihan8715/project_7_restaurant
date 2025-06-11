@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oleo+Script&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $black;
+}
+
+$element_sizes: (h1, 60px, 700), (h2, 48px, 700), (h3, 40px, 600), (h4, 30px, 600), (h5, 25px, 500), (h6, 20px, 400), (p, 16px, 400),
+  (small, 12px, 400);
+
+@each $element, $font_size, $font_weight in $element_sizes {
+  #{$element} {
+    font-size: $font_size;
+    $font-weight: $font_weight;
+  }
+}

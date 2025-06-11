@@ -1,0 +1,23 @@
+.header_area {
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  .menu {
+    li {
+      margin-left: 15px;
+    }
+    a {
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 500;
+      color: $white;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
