@@ -583,25 +583,21 @@ small {
   position: relative;
   padding-bottom: 15px;
 }
-.section_title h2::before {
-  width: 100px;
+.section_title h2::before, .section_title h2::after {
   height: 2px;
   background: #ff3636;
   position: absolute;
-  bottom: 0px;
   left: 50%;
   content: "";
   transform: translateX(-50%);
 }
+.section_title h2::before {
+  width: 100px;
+  bottom: 0px;
+}
 .section_title h2::after {
   width: 60px;
-  height: 2px;
-  background: #ff3636;
-  position: absolute;
   bottom: -10px;
-  left: 50%;
-  content: "";
-  transform: translateX(-50%);
 }
 
 .about_area .about_content p {
@@ -622,4 +618,41 @@ small {
   top: 0;
   left: 0;
   transform: translate(20%, 40%);
+}
+
+.menu_area {
+  background-color: rgba(250, 250, 250, 0.9);
+}
+.menu_area .single_menu {
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.menu_area .single_menu:hover img {
+  border-radius: 50%;
+}
+.menu_area .single_menu img {
+  max-width: 110px;
+  max-height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+.menu_area .single_menu .menu_content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed lightgray;
+  padding-bottom: 10px;
+}
+.menu_area .single_menu .menu_content h4 span {
+  font-style: italic;
+  color: orangered;
+}
+.menu_area .single_menu .menu_content p {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

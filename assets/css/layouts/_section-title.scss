@@ -17,25 +17,23 @@
     position: relative;
     padding-bottom: 15px;
 
-    &::before {
-      width: 100px;
+    &::before,
+    &::after {
       height: 2px;
       background: $primary;
       position: absolute;
-      bottom: 0px;
       left: 50%;
       content: "";
       transform: translateX(-50%);
     }
+
+    &::before {
+      width: 100px;
+      bottom: 0px;
+    }
     &::after {
       width: 60px;
-      height: 2px;
-      background: $primary;
-      position: absolute;
       bottom: -10px;
-      left: 50%;
-      content: "";
-      transform: translateX(-50%);
     }
   }
 }
