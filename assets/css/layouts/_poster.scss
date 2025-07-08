@@ -1,0 +1,17 @@
+.poster_area {
+  color: $white;
+
+  .section_title {
+    margin-bottom: 0;
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+
+      span {
+        display: inline-block;
+        font-size: 60px;
+        color: $primary;
+      }
+    }
+  }
+}

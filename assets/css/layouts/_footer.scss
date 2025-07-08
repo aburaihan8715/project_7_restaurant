@@ -1,0 +1,52 @@
+.footer_area {
+  color: $white;
+
+  .single_footer {
+    img {
+      margin-top: 90px;
+    }
+    h4 {
+      font-size: 24px;
+      text-transform: capitalize;
+      margin-bottom: 14px;
+    }
+
+    li {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 4px 0;
+    }
+    a {
+      color: $white;
+      text-transform: capitalize;
+      font-weight: 600;
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .footer_social {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $gray;
+    a {
+      color: $white;
+      padding: 0 10px;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .footer_copy {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $gray;
+    text-align: right;
+  }
+}
