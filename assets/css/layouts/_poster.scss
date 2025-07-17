@@ -4,13 +4,19 @@
   .section_title {
     margin-bottom: 0;
     h2 {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 700;
+      @include max-lg {
+        font-size: 30px;
+      }
 
       span {
         display: inline-block;
-        font-size: 60px;
+        font-size: 50px;
         color: $primary;
+        @include max-lg {
+          font-size: 30px;
+        }
       }
     }
   }

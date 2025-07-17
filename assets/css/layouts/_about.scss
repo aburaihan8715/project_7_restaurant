@@ -23,4 +23,16 @@
       }
     }
   }
+
+  .about_page_image {
+    img {
+      border: 1px solid #eee;
+      padding: 5px;
+    }
+  }
+  .about_page_content {
+    p {
+      margin: 20px 0;
+    }
+  }
 }

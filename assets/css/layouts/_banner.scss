@@ -1,6 +1,6 @@
 .banner_area {
   .single_banner {
-    min-height: 100vh;
+    height: 100vh;
 
     .banner_content {
       color: white;
@@ -8,10 +8,19 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
+
       span {
         font-size: 30px;
         font-weight: 600;
+
+        @include max-md {
+          font-size: 26px;
+        }
+
+        @include max-sm {
+          font-size: 18px;
+        }
       }
 
       h1 {
@@ -19,12 +28,26 @@
         font-weight: 700;
         text-transform: capitalize;
         margin-top: 20px;
+
+        @include max-lg {
+          font-size: 50px;
+        }
+        @include max-md {
+          font-size: 40px;
+        }
+
+        @include max-sm {
+          font-size: 22px;
+        }
       }
 
       .btn_box {
         margin-top: 50px;
         a {
           margin: 0 10px;
+          @include max-sm {
+            padding: 4px 8px;
+          }
         }
       }
     }

@@ -4,17 +4,28 @@
   .single_footer {
     img {
       margin-top: 90px;
+      width: 150px;
+      height: auto;
+      @include max-sm {
+        margin-top: 0;
+      }
     }
     h4 {
       font-size: 24px;
       text-transform: capitalize;
       margin-bottom: 14px;
+      @include max-lg {
+        font-size: 20px;
+      }
     }
 
     li {
       font-size: 16px;
       font-weight: 600;
       padding: 4px 0;
+      @include max-sm {
+        font-size: 14px;
+      }
     }
     a {
       color: $white;
@@ -34,6 +45,9 @@
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid $gray;
+    @include max-sm {
+      text-align: center;
+    }
     a {
       color: $white;
       padding: 0 10px;
@@ -48,5 +62,8 @@
     padding-top: 20px;
     border-top: 1px solid $gray;
     text-align: right;
+    @include max-sm {
+      text-align: center;
+    }
   }
 }

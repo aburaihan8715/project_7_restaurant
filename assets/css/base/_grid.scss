@@ -1,12 +1,30 @@
+/* =======================================
+common
+========================================== */
+// *,
+// *::after,
+// *::before {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
 .container {
   width: 100%;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: 0 auto;
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+[class*='col-'] {
+  width: 100%;
+  padding: 15px;
 }
 
 $grid_columns: 12;
@@ -16,112 +34,162 @@ $grid_lg_breakpoint: 992px;
 $grid_md_breakpoint: 768px;
 $grid_sm_breakpoint: 576px;
 
-@media (max-width: $grid_sm_breakpoint) {
-  .container {
-    width: 100%;
-  }
-  .col {
-    width: 100%;
+// columns equal width all devices
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100 / 12) * $i * 1%;
   }
 }
 
+/* =================================================
+media for specific width and devices
+==================================================== */
+
+// Extra small devices (phones, 576px and down)
+// it is default so no need to define it
+// @media (max-width: $grid_sm_breakpoint) {
+//   .container {
+//     width: 100%;
+//   }
+//   .col {
+//     width: 100%;
+//   }
+// }
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
 @media (min-width: $grid_sm_breakpoint) {
   .container {
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
+  }
+
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100 / 12) * $i * 1%;
+    }
   }
   .justify-sm-center {
     justify-content: center;
   }
-  @for $i from 1 through 12 {
-    .col-sm-#{$i} {
-      width: calc(100 / 12) * $i * 1%;
-      padding: 0 15px;
-    }
-  }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: $grid_md_breakpoint) {
   .container {
-    width: 740px;
+    max-width: 740px;
+    width: 100%;
   }
-  .justify-md-end {
-    justify-content: flex-end;
-  }
+
   @for $i from 1 through 12 {
     .col-md-#{$i} {
       width: calc(100 / 12) * $i * 1%;
-      padding: 0 15px;
     }
+  }
+
+  .justify-md-end {
+    justify-content: flex-end;
   }
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: $grid_lg_breakpoint) {
   .container {
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
   }
   @for $i from 1 through 12 {
     .col-lg-#{$i} {
       width: calc(100 / 12) * $i * 1%;
-      padding: 0 15px;
     }
   }
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: $grid_xl_breakpoint) {
   .container {
-    width: 1140px;
+    max-width: 1140px;
+    width: 100%;
   }
   @for $i from 1 through 12 {
     .col-xl-#{$i} {
       width: calc(100 / 12) * $i * 1%;
-      padding: 0 15px;
     }
   }
 }
 
+/* Extra extra large devices (extra large laptops and desktops, 1400px and up) */
 @media (min-width: $grid_xxl_breakpoint) {
   .container {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
   }
   @for $i from 1 through 12 {
     .col-xxl-#{$i} {
       width: calc(100 / 12) * $i * 1%;
-      padding: 0 15px;
     }
   }
 }
 
 /* Responsive Mixin */
-@mixin min-xxl {
-  @media (min-width: $grid_xxl_breakpoint) {
-    @content;
-  }
-}
-@mixin min-xl {
-  @media (min-width: $grid_xl_breakpoint) and (max-width: $grid_xxl_breakpoint) {
-    @content;
-  }
-}
-@mixin min-lg {
-  @media (min-width: $grid_lg_breakpoint) and (max-width: $grid_xl_breakpoint) {
+// it should be in abstract folder
+
+@mixin max-xxl {
+  @media (max-width: $grid_xxl_breakpoint) {
     @content;
   }
 }
 
-@mixin min-md {
-  @media (min-width: $grid_md_breakpoint) and (max-width: $grid_lg_breakpoint) {
+@mixin max-xl {
+  @media (max-width: $grid_xl_breakpoint) {
     @content;
   }
 }
 
-@mixin min-sm {
-  @media (min-width: $grid_sm_breakpoint) and (max-width: $grid_md_breakpoint) {
+@mixin max-lg {
+  @media (max-width: $grid_lg_breakpoint) {
     @content;
   }
 }
 
-@mixin max-xs {
+@mixin max-md {
+  @media (max-width: $grid_md_breakpoint) {
+    @content;
+  }
+}
+
+@mixin max-sm {
   @media (max-width: $grid_sm_breakpoint) {
     @content;
   }
 }
+
+// ==== OR =====
+/* 
+@mixin respond-to($size) {
+  @if $size == phone {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $size == tab {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $size == laptop {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $size == big-desktop {
+    @media only screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+}
+*/

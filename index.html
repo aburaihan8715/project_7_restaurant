@@ -9,10 +9,16 @@
       href="assets/css/plugins/font-awesome/css/all.min.css"
     />
 
-    <!-- slick css -->
+    <!-- slick slider css -->
     <link
       rel="stylesheet"
       href="assets/css/plugins/slick-slider/slick-slider.css"
+    />
+
+    <!-- slick nav css (mobile nav) -->
+    <link
+      rel="stylesheet"
+      href="assets/css/plugins/slick-nav/slick-nav.min.css"
     />
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -22,10 +28,10 @@
   <body>
     <!-- header start -->
     <header>
-      <div class="header_area">
+      <div class="header_area hidden">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-3">
+            <div class="col-sm-3">
               <div class="logo_box">
                 <a href="#">
                   <img src="assets/img/logo.png" alt="logo" />
@@ -33,16 +39,16 @@
               </div>
             </div>
 
-            <div class="col-lg-9">
+            <div class="col-sm-9">
               <div class="menu">
                 <ul class="d-flex justify-end">
-                  <li><a href="#">home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">menu</a></li>
-                  <li><a href="#">blogs</a></li>
-                  <li><a href="#">gallery</a></li>
-                  <li><a href="#">contact</a></li>
+                  <li><a href="index.html">home</a></li>
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="services.html">services</a></li>
+                  <li><a href="menu.html">menu</a></li>
+                  <li><a href="blogs.html">blogs</a></li>
+                  <li><a href="gallery.html">gallery</a></li>
+                  <li><a href="contact.html">contact</a></li>
                 </ul>
               </div>
             </div>
@@ -60,7 +66,7 @@
         >
           <div class="container">
             <div class="row">
-              <div class="col col-sm-12">
+              <div class="col-12">
                 <div class="banner_content">
                   <span>welcome to our restaurant</span>
                   <h1>Hot And Spicy Foods</h1>
@@ -80,7 +86,7 @@
         >
           <div class="container">
             <div class="row">
-              <div class="col col-sm-12">
+              <div class="col-12">
                 <div class="banner_content">
                   <span>welcome to our restaurant</span>
                   <h1>amazing environment</h1>
@@ -99,7 +105,7 @@
         >
           <div class="container">
             <div class="row">
-              <div class="col col-sm-12">
+              <div class="col-12">
                 <div class="banner_content">
                   <span>welcome to our restaurant</span>
                   <h1>Delicious food zone</h1>
@@ -119,7 +125,7 @@
       <section class="section_padding about_area">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-md-7">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>about us</h2>
@@ -141,7 +147,7 @@
                 <a href="#" class="btn btn_fill">read more</a>
               </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5">
               <div class="about_gallery">
                 <img src="assets/img/about/about-1.jpg" alt="about image" />
                 <img src="assets/img/about/about-2.jpg" alt="about image" />
@@ -156,7 +162,7 @@
       <section class="section_padding menu_area">
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>our menu</h2>
@@ -165,7 +171,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-1.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -177,7 +183,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-2.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -189,7 +195,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-3.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -201,7 +207,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-4.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -213,7 +219,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-5.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -225,7 +231,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_menu">
                 <img src="assets/img/menu/menu-6.jpg" alt="menu image" />
                 <div class="menu_content">
@@ -249,7 +255,7 @@
       >
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Best place for friends & family</span>
                 <h2>upto <span>20% discount!</span> for online order</h2>
@@ -264,7 +270,7 @@
       <section class="section_padding service_area">
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>our services</h2>
@@ -273,7 +279,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-1.png"
@@ -286,7 +292,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-2.png"
@@ -299,7 +305,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-3.png"
@@ -312,7 +318,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-4.png"
@@ -325,7 +331,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-5.png"
@@ -338,7 +344,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="single_service">
                 <img
                   src="assets/img/services/service-6.png"
@@ -360,7 +366,7 @@
       <section class="section_padding team_area">
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>our team</h2>
@@ -369,7 +375,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-md-6 col-lg-3">
               <div class="single_team">
                 <img src="assets/img/team/team1.jpg" alt="team imgae" />
                 <div class="team_info">
@@ -377,7 +383,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-md-6 col-lg-3">
               <div class="single_team">
                 <img src="assets/img/team/team2.jpg" alt="team imgae" />
                 <div class="team_info">
@@ -385,7 +391,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-md-6 col-lg-3">
               <div class="single_team">
                 <img src="assets/img/team/team3.jpg" alt="team imgae" />
                 <div class="team_info">
@@ -393,7 +399,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-md-6 col-lg-3">
               <div class="single_team">
                 <img src="assets/img/team/team4.jpg" alt="team imgae" />
                 <div class="team_info">
@@ -413,7 +419,7 @@
       >
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>what Clients say</h2>
@@ -422,7 +428,7 @@
           </div>
 
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="testimonials">
                 <div class="single_testimonial">
                   <img
@@ -491,7 +497,7 @@
       <section class="special_menu_area section_padding">
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>special menu</h2>
@@ -500,7 +506,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_special_menu">
                 <img
                   src="assets/img/special/sp1.jpg"
@@ -519,7 +525,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_special_menu">
                 <img
                   src="assets/img/special/sp2.jpg"
@@ -538,7 +544,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_special_menu">
                 <img
                   src="assets/img/special/sp3.jpg"
@@ -563,14 +569,14 @@
       <!-- special menu end -->
 
       <!-- cta start -->
-      <section class="cta_area section_padding">
+      <section class="cta_area">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6">
               <h2>need help?</h2>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
               <a href="tel:+880 123 4567 890"
                 ><i class="fa-solid fa-phone"></i> +880 123 4567 890
               </a>
@@ -587,7 +593,7 @@
       <section class="blogs_area section_padding">
         <div class="container">
           <div class="row">
-            <div class="col col-sm-12">
+            <div class="col-sm-12">
               <div class="section_title">
                 <span>Famous for good food</span>
                 <h2>latest blog</h2>
@@ -596,7 +602,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_blog">
                 <img src="assets/img/blog/blog-1.jpg" alt="blog image" />
                 <div class="blog_meta">
@@ -617,7 +623,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_blog">
                 <img src="assets/img/blog/blog-2.jpg" alt="blog image" />
                 <div class="blog_meta">
@@ -638,7 +644,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
               <div class="single_blog">
                 <img src="assets/img/blog/blog-3.jpg" alt="blog image" />
                 <div class="blog_meta">
@@ -672,12 +678,12 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-sm-6">
             <div class="single_footer">
               <img src="assets/img/logo.png" alt="logo image" />
             </div>
           </div>
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-sm-6">
             <div class="single_footer">
               <h4>quick links</h4>
               <ul>
@@ -705,7 +711,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-sm-6">
             <div class="single_footer">
               <h4>opening hours</h4>
               <ul>
@@ -721,7 +727,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-sm-6">
             <div class="single_footer">
               <h4>contact us</h4>
               <ul>
@@ -742,7 +748,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-sm-6">
             <div class="footer_social">
               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
               <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -751,7 +757,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-sm-6">
             <div class="footer_copy">
               <p>&copy; 2021 All rights reserved.</p>
             </div>
@@ -763,8 +769,11 @@
 
     <!-- jquery js -->
     <script src="assets/js/jquery.min.js"></script>
-    <!-- slick js -->
-    <script src="assets/js/slick.min.js"></script>
+    <!-- slick slider js -->
+    <script src="assets/js/slick-slider.min.js"></script>
+
+    <!-- slick nav js -->
+    <script src="assets/js/slick-nav.min.js"></script>
 
     <!-- main js -->
     <script src="assets/js/main.js"></script>

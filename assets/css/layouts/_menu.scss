@@ -2,12 +2,15 @@
   background-color: $gray;
 
   .single_menu {
-    margin-bottom: 30px;
     background: white;
     padding: 15px;
     display: flex;
     gap: 20px;
     align-items: center;
+    @include max-md {
+      flex-direction: column;
+    }
+
     &:hover {
       img {
         border-radius: 50%;
@@ -15,10 +18,15 @@
     }
 
     img {
-      max-width: 110px;
-      max-height: 110px;
+      width: 110px;
+      height: 110px;
       object-fit: cover;
       transition: 0.3s;
+
+      @include max-md {
+        width: 100%;
+        height: 200px;
+      }
     }
 
     .menu_content {

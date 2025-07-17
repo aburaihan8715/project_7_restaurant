@@ -1,11 +1,19 @@
 .cta_area {
   background-color: $primary;
   color: $white;
+  padding: 40px 0;
 
   h2 {
     text-align: right;
     text-transform: uppercase;
     font-size: 50px;
+    @include max-md {
+      font-size: 30px;
+    }
+    @include max-sm {
+      font-size: 30px;
+      text-align: center;
+    }
   }
 
   a {
@@ -15,5 +23,8 @@
     margin: 14px 0;
     line-height: 1;
     font-weight: 600;
+    @include max-sm {
+      text-align: center;
+    }
   }
 }

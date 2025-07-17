@@ -17,13 +17,17 @@
     position: relative;
     padding-bottom: 15px;
 
+    @include max-sm {
+      font-size: 36px;
+    }
+
     &::before,
     &::after {
       height: 2px;
       background: $primary;
       position: absolute;
       left: 50%;
-      content: "";
+      content: '';
       transform: translateX(-50%);
     }
 
@@ -34,6 +38,34 @@
     &::after {
       width: 60px;
       bottom: -10px;
+    }
+  }
+}
+
+.sub_title {
+  h3 {
+    text-transform: capitalize;
+    font-size: 25px;
+    position: relative;
+    padding-bottom: 5px;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 2px;
+      background-color: $primary;
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      width: 60px;
+      bottom: 0;
+    }
+
+    &::after {
+      width: 40px;
+      bottom: -5px;
     }
   }
 }

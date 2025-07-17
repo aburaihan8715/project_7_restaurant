@@ -1,8 +1,10 @@
 $(document).ready(function () {
   // banner
-  $(".banner_area").slick({
-    prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i></button>',
+  $('.banner_area').slick({
+    prevArrow:
+      '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i></button>',
     autoplay: true,
 
     responsive: [
@@ -12,20 +14,26 @@ $(document).ready(function () {
           arrows: false,
         },
       },
+    ],
+  });
+
+  // testimonials
+  $('.testimonials').slick({
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    slidesToShow: 2,
+    responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           arrows: false,
+          slidesToShow: 1,
         },
       },
     ],
   });
 
-  // testimonials
-  $(".testimonials").slick({
-    arrows: false,
-    autoplay: true,
-    dots: true,
-    slidesToShow: 2,
-  });
+  // slick nav
+  $('#mobile-menu').slicknav();
 });

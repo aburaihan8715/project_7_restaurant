@@ -1,0 +1,27 @@
+.breadcrumb_area {
+  color: $white;
+
+  .breadcrumb_content {
+    padding: 140px 0 40px;
+
+    h2 {
+      text-transform: capitalize;
+      font-size: 40px;
+    }
+
+    ul {
+      display: flex;
+      gap: 15px;
+    }
+
+    li {
+      text-transform: capitalize;
+    }
+    a {
+      color: $white;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
