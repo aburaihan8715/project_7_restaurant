@@ -35,5 +35,5 @@ $(document).ready(function () {
   });
 
   // slick nav
-  $('#mobile-menu').slicknav();
+  $('#mobile_menu').slicknav();
 });

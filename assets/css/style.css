@@ -619,6 +619,25 @@ media for specific width and devices
   right: 0;
   z-index: 99;
 }
+@media (max-width: 768px) {
+  .header_area {
+    position: static;
+    padding: 0;
+    height: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header_area .logo_box {
+    position: absolute;
+    top: 13px;
+    width: 140px;
+  }
+}
+@media (max-width: 576px) {
+  .header_area .menu {
+    display: none;
+  }
+}
 .header_area .menu li {
   margin-left: 15px;
 }
@@ -632,8 +651,25 @@ media for specific width and devices
   color: #ff3636;
 }
 
+.slicknav_menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .slicknav_menu {
+    display: block;
+  }
+}
+.slicknav_menu a {
+  text-transform: capitalize;
+}
+
 .banner_area .single_banner {
   height: 100vh;
+}
+@media (max-width: 576px) {
+  .banner_area .single_banner {
+    height: 60vh;
+  }
 }
 .banner_area .single_banner .banner_content {
   color: white;
@@ -642,6 +678,11 @@ media for specific width and devices
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+@media (max-width: 576px) {
+  .banner_area .single_banner .banner_content {
+    height: 60vh;
+  }
 }
 .banner_area .single_banner .banner_content span {
   font-size: 30px;

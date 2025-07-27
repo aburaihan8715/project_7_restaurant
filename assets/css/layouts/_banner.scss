@@ -1,6 +1,9 @@
 .banner_area {
   .single_banner {
     height: 100vh;
+    @include max-sm {
+      height: 60vh;
+    }
 
     .banner_content {
       color: white;
@@ -9,6 +12,9 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      @include max-sm {
+        height: 60vh;
+      }
 
       span {
         font-size: 30px;

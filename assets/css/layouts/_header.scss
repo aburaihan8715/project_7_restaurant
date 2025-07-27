@@ -5,8 +5,25 @@
   left: 0;
   right: 0;
   z-index: 99;
+  @include max-md {
+    position: static;
+    padding: 0;
+    height: 0;
+  }
+
+  .logo_box {
+    @include max-md {
+      position: absolute;
+      top: 13px;
+      width: 140px;
+    }
+  }
 
   .menu {
+    @include max-sm {
+      display: none;
+    }
+
     li {
       margin-left: 15px;
     }
@@ -19,5 +36,15 @@
         color: $primary;
       }
     }
+  }
+}
+// mobile menu
+.slicknav_menu {
+  display: none;
+  @include max-md {
+    display: block;
+  }
+  a {
+    text-transform: capitalize;
   }
 }
